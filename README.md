@@ -12,6 +12,7 @@ A decentralized crowdfunding dApp built on the **Stellar Testnet** using **Sorob
 
 > **Live Demo:** _[Coming soon — deploy to Vercel/Netlify and paste URL here]_
 > **Deployed Contract Address:** `CAYPRQFZ6MI5ADZEMMPPNLR4E6MYYUY6HQN2YJMH4XF6KAJE5SFTLADB`
+> **Transaction Hash (Contract Call):** `aed38a2ff377f995b72c7173dca9b3674568674472c4dbe5dc626be35cb7dec8f` ([View on Explorer](https://stellar.expert/explorer/testnet/tx/aed38a2ff377f995b72c7173dca9b3674568674472c4dbe5dc626be35cb7dec8f))
 > **Network:** Stellar Testnet (Soroban)
 
 You can verify the deployed contract on [Stellar Expert](https://stellar.expert/explorer/testnet/contract/CAYPRQFZ6MI5ADZEMMPPNLR4E6MYYUY6HQN2YJMH4XF6KAJE5SFTLADB).

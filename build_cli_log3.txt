@@ -1,0 +1,63 @@
+﻿stellar : Γä╣∩╕Å  CARGO
+_BUILD_RUSTFLAGS=--rema
+p-path-prefix=C:/Users/
+Lenovo/.cargo/registry/
+src= SOROBAN_SDK_BUILD_
+SYSTEM_SUPPORTS_SPEC_SH
+AKING_V2=1 cargo rustc 
+--manifest-path=Cargo.t
+oml 
+--crate-type=cdylib 
+--target=wasm32v1-none 
+--release
+At line:1 char:46
++ ... = ";$env:USERPROF
+ILE\.cargo\bin"; 
+stellar contract build 
+2>&1 | Out-F ...
++                      
+                 ~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (Γä╣∩╕Å  CARGO   
+ _B...-none --relea    
+se:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+warning: unused 
+manifest key: dev-depen
+dencies.soroban-sdk.tes
+tutils
+   Compiling 
+soroban-sdk v21.7.7
+   Compiling fundflow 
+v0.1.0 (C:\Users\Lenovo
+\Desktop\stellar level 
+02\contract)
+    Finished `release` 
+profile [optimized] 
+target(s) in 4.47s
+Γä╣∩╕Å  Build Summary:
+    Wasm File: target\w
+asm32v1-none\release\fu
+ndflow.wasm (5080 
+bytes)
+    Wasm Hash: 54b3513e
+a77555aafc51bcf63392a64
+b483f5a63ca05a79e8ef119
+c2f7c54ef4
+    Wasm Size: 5080 
+bytes
+    Exported 
+Functions: 4 found
+      ΓÇó _
+      ΓÇó donate
+      ΓÇó 
+get_campaign_info
+      ΓÇó initialize
+Γ£à Build Complete
+

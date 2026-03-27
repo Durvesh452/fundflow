@@ -1,0 +1,66 @@
+﻿stellar : Γä╣∩╕Å  
+Uploading contract 
+WASMΓÇª
+At line:1 char:1
++ stellar contract 
+deploy --wasm "target\w
+asm32-unknown-unknown\r
+elease ...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (Γä╣∩╕Å  Uploa   
+ ding contract WASM    
+ΓÇª:String) [], Re    
+moteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+Γä╣∩╕Å  Simulating 
+transactionΓÇª
+Γä╣∩╕Å  Signing 
+transaction: c8544e9a0b
+7f180925d2041c71c3b6834
+ffbe97f668090f81f4ddb27
+39624da7
+≡ƒîÄ Sending 
+transactionΓÇª
+Γ£à Transaction 
+submitted successfully!
+≡ƒöù https://stellar.ex
+pert/explorer/testnet/t
+x/c8544e9a0b7f180925d20
+41c71c3b6834ffbe97f6680
+90f81f4ddb2739624da7
+Γä╣∩╕Å  Deploying 
+contract using wasm 
+hash 025ea41b2087fd64b5
+3bfe9043e0c7457fc520ad1
+52c1613114dd6c371fbebce
+Γä╣∩╕Å  Simulating 
+transactionΓÇª
+Γä╣∩╕Å  Signing 
+transaction: df9a4ccd29
+c23ca8f87936bf9180f3481
+b66bef40782cfae5738b6c1
+855976b8
+≡ƒîÄ Sending 
+transactionΓÇª
+Γ£à Transaction 
+submitted successfully!
+≡ƒöù https://stellar.ex
+pert/explorer/testnet/t
+x/df9a4ccd29c23ca8f8793
+6bf9180f3481b66bef40782
+cfae5738b6c1855976b8
+≡ƒöù https://lab.stella
+r.org/r/testnet/contrac
+t/CAYPRQFZ6MI5ADZEMMPPN
+LR4E6MYYUY6HQN2YJMH4XF6
+KAJE5SFTLADB
+Γ£à Deployed!
+CAYPRQFZ6MI5ADZEMMPPNLR4E6MYYUY6HQN2YJMH4XF6KAJE5SFTLADB

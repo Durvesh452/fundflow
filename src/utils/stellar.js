@@ -88,12 +88,56 @@ export const fetchCampaignInfo = async () => {
       total_raised: BigInt(result.total_raised ?? 0),
       donor_count: Number(result.donor_count ?? 0),
       last_donation_amount: BigInt(result.last_donation_amount ?? 0),
-      last_donor_address: result.last_donor_address ?? null,
+      last_donor_address: result.last_donor_address ? result.last_donor_address.toString() : null,
       goal: BigInt(result.goal ?? CONFIG.FUNDING_GOAL_XLM * 10_000_000),
     };
   } catch (err) {
     console.warn('fetchCampaignInfo: using mock data due to error:', err.message);
     return MOCK_DATA;
+  }
+};
+
+/**
+ * Fetch latest donation events from the contract
+ */
+export const fetchEvents = async () => {
+  if (!CONFIG.CONTRACT_ID || CONFIG.CONTRACT_ID === 'YOUR_CONTRACT_ID_HERE') {
+    return [];
+  }
+
+  try {
+    const latestLedgerResponse = await server.getLatestLedger();
+    const startLedger = Math.max(0, latestLedgerResponse.sequence - 1000); // Look back ~1.5 hours
+
+    const response = await server.getEvents({
+      startLedger,
+      filters: [
+        {
+          type: 'contract',
+          contractIds: [CONFIG.CONTRACT_ID],
+          topics: [
+            [nativeToScVal('DONATION', { type: 'symbol' }).toXDR('base64'), '*']
+          ],
+        },
+      ],
+    });
+
+    return response.events.map((e) => {
+      // Topic 0: DONATION, Topic 1: Donor Address
+      const donor = scValToNative(e.topic[1]);
+      const amount = scValToNative(e.value);
+
+      return {
+        id: e.id,
+        address: donor.toString(),
+        amount: BigInt(amount),
+        time: new Date(), // We don't have exact timestamp here easily without another RPC call, so we use current
+        ledger: e.ledger,
+      };
+    }).reverse(); // Newest first
+  } catch (err) {
+    console.error('fetchEvents error:', err);
+    return [];
   }
 };
 
@@ -162,21 +206,24 @@ export const submitDonation = async (donorPublicKey, amountXlm, signTransaction)
   }
 
   // Submit
-  const { TransactionBuilder: TB } = await import('@stellar/stellar-sdk');
-  const signedTx = TB.fromXDR(signedXdr, CONFIG.NETWORK_PASSPHRASE);
+  const signedTx = TransactionBuilder.fromXDR(signedXdr, CONFIG.NETWORK_PASSPHRASE);
   const sendResult = await server.sendTransaction(signedTx);
 
   if (sendResult.status === 'ERROR') {
-    throw new Error(`INSUFFICIENT_BALANCE: ${sendResult.errorResult?.toString()}`);
+    const errorString = sendResult.errorResult?.toString() || '';
+    if (errorString.includes('tx_insufficient_balance')) {
+      throw new Error('INSUFFICIENT_BALANCE');
+    }
+    throw new Error(`TRANSACTION_FAILED: ${errorString}`);
   }
 
   // Poll for confirmation
   const hash = sendResult.hash;
   let getResult;
   for (let i = 0; i < 30; i++) {
-    await new Promise((r) => setTimeout(r, 1000));
     getResult = await server.getTransaction(hash);
     if (getResult.status !== rpc.Api.GetTransactionStatus.NOT_FOUND) break;
+    await new Promise((r) => setTimeout(r, 1000));
   }
 
   if (getResult.status === rpc.Api.GetTransactionStatus.FAILED) {

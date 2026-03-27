@@ -1,0 +1,30 @@
+﻿stellar : ΓÜá∩╕Å  
+`stellar contract 
+optimize` is 
+deprecated and will be 
+removed in future 
+versions of the CLI. 
+Use `stellar contract 
+build --optimize` 
+instead.
+At line:1 char:46
++ ... cargo\bin"; 
+stellar contract 
+optimize --wasm "target
+\wasm32-unknown-u ...
++                 ~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (ΓÜá∩╕Å  `stel   
+ la...imize` instea    
+d.:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+Reading: target\wasm32-unknown-unknown\release\fundflow.wasm (6369 bytes)
+Optimized: target\wasm32-unknown-unknown\release\fundflow.optimized.wasm (3445 bytes)

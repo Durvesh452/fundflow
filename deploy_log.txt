@@ -1,0 +1,41 @@
+﻿stellar : Γä╣∩╕Å  
+Uploading contract WASMΓÇª
+At line:1 char:1
++ stellar contract deploy 
+--wasm "target\wasm32-unkno
+wn-unknown\release ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecifi    ed: 
+(Γä╣∩╕Å  Uploa    ding 
+contract WASM    
+ΓÇª:String) [], Re    
+moteException
+    + FullyQualifiedEr    
+rorId : NativeComm    
+andError
+ 
+Γä╣∩╕Å  Simulating 
+transactionΓÇª
+Γ¥î error: transaction 
+simulation failed: 
+HostError: Error(WasmVm, 
+InvalidAction)
+
+Event log (newest first):
+   0: [Diagnostic Event] 
+topics:[error, 
+Error(WasmVm, 
+InvalidAction)], data:"Modu
+le(Translation(TranslationE
+rror { inner: 
+Validate(BinaryReaderError 
+{ inner: 
+BinaryReaderErrorInner { 
+message: "reference-types 
+not enabled: zero byte 
+expected", offset: 2434, 
+needed_hint: None } }) }))"
+

@@ -15,8 +15,14 @@ export default defineConfig({
     }),
   ],
   optimizeDeps: {
-    exclude: ['@creit.tech/stellar-wallets-kit'],
+    include: [
+      '@creit.tech/stellar-wallets-kit',
+      '@creit.tech/stellar-wallets-kit/modules/freighter',
+      '@creit.tech/stellar-wallets-kit/modules/albedo',
+      '@creit.tech/stellar-wallets-kit/modules/xbull',
+      '@stellar/freighter-api',
+      '@albedo-link/intent',
+      '@creit.tech/xbull-wallet-connect',
+    ],
   },
 })
-
-

@@ -1,0 +1,75 @@
+﻿stellar : Γä╣∩╕Å  CARGO
+_BUILD_RUSTFLAGS=--rema
+p-path-prefix=C:/Users/
+Lenovo/.cargo/registry/
+src= SOROBAN_SDK_BUILD_
+SYSTEM_SUPPORTS_SPEC_SH
+AKING_V2=1 cargo rustc 
+--manifest-path=Cargo.t
+oml 
+--crate-type=cdylib 
+--target=wasm32v1-none 
+--release
+At line:1 char:46
++ ... = ";$env:USERPROF
+ILE\.cargo\bin"; 
+stellar contract build 
+2>&1 | Out-F ...
++                      
+                 ~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (Γä╣∩╕Å  CARGO   
+ _B...-none --relea    
+se:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+   Compiling 
+escape-bytes v0.1.1
+   Compiling 
+num-traits v0.2.19
+   Compiling ethnum 
+v1.5.2
+   Compiling 
+static_assertions 
+v1.1.0
+   Compiling 
+stellar-xdr v21.2.0
+   Compiling 
+soroban-sdk v21.7.7
+   Compiling 
+soroban-env-common 
+v21.2.1
+   Compiling 
+soroban-env-guest 
+v21.2.1
+error[E0463]: can't 
+find crate for `std`
+  --> index.crates.io-1
+949cf8c6b5b557f\soroban
+-sdk-21.7.7\src\lib.rs:
+77:1
+   |
+77 | extern crate std;
+   | ^^^^^^^^^^^^^^^^^ 
+can't find crate
+   |
+   = note: the 
+`wasm32v1-none` target 
+may not support the 
+standard library
+
+For more information 
+about this error, try 
+`rustc --explain 
+E0463`.
+error: could not 
+compile `soroban-sdk` 
+(lib) due to 1 
+previous error
+Γ¥î error: exit status 
+exit code: 101

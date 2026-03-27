@@ -1,0 +1,160 @@
+﻿cargo :    Compiling 
+proc-macro2 v1.0.106
+At line:1 char:46
++ ... cargo\bin"; 
+cargo build --target 
+wasm32-unknown-unknown 
+--release 2>& ...
++                 ~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (   Compiling    
+ proc-macro2 v1.0.1    
+06:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+   Compiling 
+unicode-ident v1.0.24
+   Compiling quote 
+v1.0.45
+   Compiling 
+serde_core v1.0.228
+   Compiling zmij 
+v1.0.21
+   Compiling serde 
+v1.0.228
+   Compiling 
+serde_json v1.0.149
+   Compiling memchr 
+v2.8.0
+   Compiling syn 
+v2.0.117
+   Compiling itoa 
+v1.0.18
+   Compiling 
+ident_case v1.0.1
+   Compiling strsim 
+v0.11.1
+   Compiling autocfg 
+v1.5.0
+   Compiling thiserror 
+v1.0.69
+   Compiling base32 
+v0.4.0
+   Compiling typenum 
+v1.19.0
+   Compiling 
+version_check v0.9.5
+   Compiling semver 
+v1.0.27
+   Compiling 
+darling_core v0.23.0
+   Compiling 
+generic-array v0.14.9
+   Compiling 
+escape-bytes v0.1.1
+   Compiling 
+num-traits v0.2.19
+   Compiling 
+serde_derive v1.0.228
+   Compiling 
+thiserror-impl v1.0.69
+   Compiling 
+darling_macro v0.23.0
+   Compiling either 
+v1.15.0
+   Compiling darling 
+v0.23.0
+   Compiling itertools 
+v0.11.0
+   Compiling 
+serde_with_macros 
+v3.18.0
+   Compiling 
+rustc_version v0.4.1
+   Compiling hashbrown 
+v0.16.1
+   Compiling 
+crate-git-revision 
+v0.0.6
+   Compiling 
+serde_with v3.18.0
+   Compiling hex v0.4.3
+   Compiling 
+stellar-strkey v0.0.8
+   Compiling 
+stellar-xdr v21.2.0
+   Compiling 
+soroban-env-common 
+v21.2.1
+   Compiling 
+equivalent v1.0.2
+   Compiling 
+block-buffer v0.10.4
+   Compiling indexmap 
+v2.13.0
+   Compiling 
+crypto-common v0.1.6
+   Compiling 
+num-derive v0.4.2
+   Compiling 
+prettyplease v0.2.37
+   Compiling fnv v1.0.7
+   Compiling 
+darling_core v0.20.11
+   Compiling 
+wasmparser v0.116.1
+   Compiling digest 
+v0.10.7
+   Compiling 
+cpufeatures v0.2.17
+   Compiling base64 
+v0.13.1
+   Compiling cfg-if 
+v1.0.4
+   Compiling sha2 
+v0.10.9
+   Compiling 
+darling_macro v0.20.11
+   Compiling 
+soroban-sdk-macros 
+v21.7.7
+   Compiling 
+num-integer v0.1.46
+   Compiling ethnum 
+v1.5.2
+   Compiling 
+static_assertions 
+v1.1.0
+   Compiling 
+num-bigint v0.4.6
+   Compiling darling 
+v0.20.11
+   Compiling 
+soroban-sdk v21.7.7
+   Compiling bytes-lit 
+v0.0.5
+   Compiling 
+soroban-spec v21.7.7
+   Compiling 
+soroban-spec-rust 
+v21.7.7
+   Compiling 
+soroban-env-macros 
+v21.2.1
+   Compiling 
+soroban-env-guest 
+v21.2.1
+   Compiling fundflow 
+v0.1.0 (C:\Users\Lenovo
+\Desktop\stellar level 
+02\contract)
+    Finished `release` 
+profile [optimized] 
+target(s) in 1m 26s

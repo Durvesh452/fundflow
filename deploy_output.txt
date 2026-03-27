@@ -1,0 +1,48 @@
+﻿stellar.exe : Γä╣∩╕Å  
+Uploading contract 
+WASMΓÇª
+At line:1 char:8
++ $out = & "C:\Users\Le
+novo\.cargo\bin\stellar
+.exe" contract deploy 
+--w ...
++        ~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (Γä╣∩╕Å  Uploa   
+ ding contract WASM    
+ΓÇª:String) [], Re    
+moteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+Γä╣∩╕Å  Simulating 
+transactionΓÇª
+Γ¥î error: transaction 
+simulation failed: 
+HostError: 
+Error(WasmVm, 
+InvalidAction)
+
+Event log (newest 
+first):
+   0: [Diagnostic 
+Event] topics:[error, 
+Error(WasmVm, 
+InvalidAction)], data:"
+Module(Translation(Tran
+slationError { inner: V
+alidate(BinaryReaderErr
+or { inner: 
+BinaryReaderErrorInner 
+{ message: 
+"reference-types not 
+enabled: zero byte 
+expected", offset: 
+2359, needed_hint: 
+None } }) }))"
+

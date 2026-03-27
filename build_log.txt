@@ -1,0 +1,30 @@
+﻿stellar : Γ¥î error: 
+invalid Cargo.toml 
+configuration: 
+`overflow-checks` is 
+not enabled for 
+profile `release`. To 
+prevent silent integer 
+overflow, add 
+`overflow-checks = 
+true` to 
+[profile.release] in 
+your Cargo.toml.
+At line:1 char:46
++ ... = ";$env:USERPROF
+ILE\.cargo\bin"; 
+stellar contract build 
+2>&1 | Out-F ...
++                      
+                 ~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (Γ¥î error: in   
+ va...our Cargo.tom    
+l.:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
