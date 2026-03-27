@@ -1,0 +1,41 @@
+﻿cargo.exe :      Locking 10 packages to 
+latest compatible versions
+At line:1 char:1
++ & "$env:USERPROFILE\.cargo\bin\cargo" test 
+2>&1 | Out-File -Encoding  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~
+    + CategoryInfo          : NotSpecified: ( 
+        Locking 10...atible versions:String)  
+   [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandEr 
+   ror
+ 
+      Adding addr2line v0.25.1
+      Adding adler2 v2.0.1
+      Adding arbitrary v1.3.2 (available: 
+v1.4.2)
+      Adding backtrace v0.3.76
+      Adding ctor v0.2.9
+      Adding derive_arbitrary v1.3.2 
+(available: v1.4.2)
+      Adding gimli v0.32.3
+      Adding miniz_oxide v0.8.9
+      Adding object v0.37.3
+      Adding rustc-demangle v0.1.27
+   Compiling soroban-sdk v21.7.7
+   Compiling fundflow v0.1.0 
+(C:\Users\Lenovo\Desktop\fundflow level 
+3\contract)
+    Finished `test` profile [unoptimized + 
+debuginfo] target(s) in 16.71s
+     Running unittests src\lib.rs (target\debu
+g\deps\fundflow-ff31d114ed5cc173.exe)
+
+running 3 tests
+test test::test_initialize ... ok
+test test::test_donate ... ok
+test test::test_double_initialize - should panic ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.25s
+

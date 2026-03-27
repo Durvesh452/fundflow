@@ -34,10 +34,24 @@ const ERROR_MESSAGES = {
 };
 
 const getErrorInfo = (err) => {
-  const msg = err?.message ?? '';
-  for (const [key, val] of Object.entries(ERROR_MESSAGES)) {
-    if (msg.startsWith(key) || msg.includes(key)) return val;
+  const msg = err?.message ?? String(err) ?? '';
+  
+  if (msg.includes('User declined') || msg.includes('User rejected') || msg.includes('USER_REJECTED')) {
+    return ERROR_MESSAGES.USER_REJECTED;
   }
+  if (msg.includes('Insufficient') || msg.includes('INSUFFICIENT_BALANCE') || msg.includes('insufficient')) {
+    return ERROR_MESSAGES.INSUFFICIENT_BALANCE;
+  }
+  if (msg.includes('Failed') || msg.includes('TRANSACTION_FAILED') || msg.includes('tx_failed')) {
+    return ERROR_MESSAGES.TRANSACTION_FAILED;
+  }
+  if (msg.includes('CONTRACT_NOT_DEPLOYED') || msg.includes('not found') || msg.includes('status: 404')) {
+    return ERROR_MESSAGES.CONTRACT_NOT_DEPLOYED;
+  }
+  if (msg.includes('WALLET_NOT_FOUND') || msg.includes('Please install')) {
+    return ERROR_MESSAGES.WALLET_NOT_FOUND;
+  }
+
   return { title: 'Error', body: msg || 'An unexpected error occurred.', icon: <XCircle size={18} /> };
 };
 

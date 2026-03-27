@@ -1,0 +1,186 @@
+﻿cargo.exe : warning: unused manifest key: 
+dev-dependencies.soroban-sdk.testutils
+At line:1 char:1
++ & "$env:USERPROFILE\.cargo\bin\cargo" check 
+--tests 2>&1 | Out-File - ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ( 
+   warning: unused...n-sdk.testutils:String)  
+   [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandEr 
+   ror
+ 
+    Checking fundflow v0.1.0 
+(C:\Users\Lenovo\Desktop\fundflow level 
+3\contract)
+error[E0432]: unresolved import 
+`soroban_sdk::testutils`
+   --> src\lib.rs:119:22
+    |
+119 |     use soroban_sdk::testutils::Address 
+as _;
+    |                      ^^^^^^^^^ could 
+not find `testutils` in `soroban_sdk`
+    |
+note: found an item that was configured out
+   --> C:\Users\Lenovo\.cargo\registry\src\ind
+ex.crates.io-1949cf8c6b5b557f\soroban-sdk-21.7
+.7\src\lib.rs:818:9
+    |
+818 | pub mod testutils;
+    |         ^^^^^^^^^
+    |
+   ::: C:\Users\Lenovo\.cargo\registry\src\ind
+ex.crates.io-1949cf8c6b5b557f\soroban-sdk-21.7
+.7\src\testutils.rs:1:11
+    |
+  1 | #![cfg(any(test, feature = 
+"testutils"))]
+    |           ----------------------------- 
+the item is gated here
+
+error[E0599]: no method named 
+`register_contract` found for struct `Env` in 
+the current scope
+   --> src\lib.rs:125:31
+    |
+125 |         let contract_id = 
+env.register_contract(None, FundFlowContract);
+    |                               
+^^^^^^^^^^^^^^^^^
+    |
+help: there is a method `create_contract` 
+with a similar name, but with different 
+arguments
+   --> C:\Users\Lenovo\.cargo\registry\src\ind
+ex.crates.io-1949cf8c6b5b557f\soroban-env-comm
+on-21.2.1\src\env.rs:346:9
+    |
+346 |         fn $fn_id(&self, 
+$($arg:$type),*) -> Result<$ret, Self::Error>;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+407 | call_macro_with_all_host_functions! { 
+generate_env_trait }
+    | ----------------------------------------
+------------------ in this macro invocation
+    = note: this error originates in the 
+macro `host_function_helper` which comes from 
+the expansion of the macro 
+`call_macro_with_all_host_functions` (in 
+Nightly builds, run with -Z macro-backtrace 
+for more info)
+
+error[E0599]: no method named 
+`mock_all_auths` found for struct `Env` in 
+the current scope
+   --> src\lib.rs:139:13
+    |
+139 |         env.mock_all_auths();
+    |             ^^^^^^^^^^^^^^ method not 
+found in `Env`
+
+error[E0599]: no method named 
+`register_contract` found for struct `Env` in 
+the current scope
+   --> src\lib.rs:140:31
+    |
+140 |         let contract_id = 
+env.register_contract(None, FundFlowContract);
+    |                               
+^^^^^^^^^^^^^^^^^
+    |
+help: there is a method `create_contract` 
+with a similar name, but with different 
+arguments
+   --> C:\Users\Lenovo\.cargo\registry\src\ind
+ex.crates.io-1949cf8c6b5b557f\soroban-env-comm
+on-21.2.1\src\env.rs:346:9
+    |
+346 |         fn $fn_id(&self, 
+$($arg:$type),*) -> Result<$ret, Self::Error>;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+407 | call_macro_with_all_host_functions! { 
+generate_env_trait }
+    | ----------------------------------------
+------------------ in this macro invocation
+    = note: this error originates in the 
+macro `host_function_helper` which comes from 
+the expansion of the macro 
+`call_macro_with_all_host_functions` (in 
+Nightly builds, run with -Z macro-backtrace 
+for more info)
+
+error[E0599]: no function or associated item 
+named `generate` found for struct 
+`soroban_sdk::Address` in the current scope
+   --> src\lib.rs:145:30
+    |
+145 |         let donor = 
+Address::generate(&env);
+    |                              ^^^^^^^^ 
+function or associated item not found in 
+`soroban_sdk::Address`
+    |
+note: if you're trying to build a new 
+`soroban_sdk::Address` consider using one of 
+the following associated functions:
+      soroban_sdk::Address::from_string
+      soroban_sdk::Address::from_string_bytes
+   --> C:\Users\Lenovo\.cargo\registry\src\ind
+ex.crates.io-1949cf8c6b5b557f\soroban-sdk-21.7
+.7\src\address.rs:235:5
+    |
+235 |     pub fn from_string(strkey: &String) 
+-> Self {
+    |     
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+257 |     pub fn from_string_bytes(strkey: 
+&Bytes) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
+
+error[E0599]: no method named 
+`register_contract` found for struct `Env` in 
+the current scope
+   --> src\lib.rs:160:31
+    |
+160 |         let contract_id = 
+env.register_contract(None, FundFlowContract);
+    |                               
+^^^^^^^^^^^^^^^^^
+    |
+help: there is a method `create_contract` 
+with a similar name, but with different 
+arguments
+   --> C:\Users\Lenovo\.cargo\registry\src\ind
+ex.crates.io-1949cf8c6b5b557f\soroban-env-comm
+on-21.2.1\src\env.rs:346:9
+    |
+346 |         fn $fn_id(&self, 
+$($arg:$type),*) -> Result<$ret, Self::Error>;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+407 | call_macro_with_all_host_functions! { 
+generate_env_trait }
+    | ----------------------------------------
+------------------ in this macro invocation
+    = note: this error originates in the 
+macro `host_function_helper` which comes from 
+the expansion of the macro 
+`call_macro_with_all_host_functions` (in 
+Nightly builds, run with -Z macro-backtrace 
+for more info)
+
+Some errors have detailed explanations: 
+E0432, E0599.
+For more information about an error, try 
+`rustc --explain E0432`.
+error: could not compile `fundflow` (lib 
+test) due to 6 previous errors
